@@ -1,5 +1,3 @@
-//Abdul Qadir
-
 //Importers
 //import java.util.ArrayList; 
 import java.util.concurrent.ThreadLocalRandom;
@@ -307,7 +305,7 @@ public class SmartAR {
 			t++;
 		 }
 		setThreshold(t);
-		// converting in to array
+		
 		keys = s.split("\n");
 		for (String key : keys) {
 		    add(key,null);
@@ -319,42 +317,42 @@ public class SmartAR {
 		//Test file 2
 		
 		
-//		inputStream = new FileInputStream("ar_test_file2.txt");
-//		Scanner scanner2 = new Scanner(inputStream); 
-//		t = 0;
-//
-//		while(scanner2.hasNextLine()){
-//			
-//			f = scanner2.nextLine();
-//			s = s + setKeyLength(f) + "\n";
-//			t++;
-//		 }
-//		setThreshold(t);
-//		
-//		keys = s.split("\n");
-//		for (String key : keys) {
-//		    add(key,null);
-//		}
-//
-//		add("UAI432MU9LQ","apple");
-//		System.out.print(getValues("UAI432MU9LQ"));
-//		System.out.println("\n");
-//		inputStream = null;
+		inputStream = new FileInputStream("ar_test_file2.txt");
+		Scanner scanner2 = new Scanner(inputStream); 
+		t = 0;
+
+		while(scanner2.hasNextLine()){
+			
+			f = scanner2.nextLine();
+			s = s + setKeyLength(f) + "\n";
+			t++;
+		 }
+		setThreshold(t);
+		
+		keys = s.split("\n");
+		for (String key : keys) {
+		    add(key,null);
+		}
+
+		add("UAI432MU9LQ","apple");
+		System.out.print(getValues("UAI432MU9LQ"));
+		System.out.println("\n");
+		inputStream = null;
 
 		
 		//Test file 3
-//		inputStream = new FileInputStream("ar_test_file3.txt");
-//		Scanner scanner3 = new Scanner(inputStream); 
-//
-//		t = 0;
-//
-//		while(scanner3.hasNextLine()){
-//			
-//			f = scanner3.nextLine();
-//			s = s + setKeyLength(f) + "\n";
-//			t++;
-//		 }
-//		setThreshold(t);
+		inputStream = new FileInputStream("ar_test_file3.txt");
+		Scanner scanner3 = new Scanner(inputStream); 
+
+		t = 0;
+
+		while(scanner3.hasNextLine()){
+			
+			f = scanner3.nextLine();
+			s = s + setKeyLength(f) + "\n";
+			t++;
+		 }
+		setThreshold(t);
 		
 		keys = s.split("\n");
 		for (String key : keys) {
@@ -366,20 +364,16 @@ public class SmartAR {
 		add("P5ARD5","oranges");
 		System.out.print(getValues("P5ARD5"));
 		
-		remove("YYS69I3Q1");
-		System.out.print(getValues("YYS69I3Q1"));
+		remove("P5ARD5");
 		System.out.print(allKeys());
 		System.out.println("\n");
 		inputStream = null;
-		
-System.out.println("generate 20 keys");
+
 		
 		scanner1.close();
-	//	scanner2.close();
-	//	scanner3.close();
+		scanner2.close();
+		scanner3.close();
 
 	}
 
 }
-
-
